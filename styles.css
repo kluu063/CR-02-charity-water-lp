@@ -18,6 +18,182 @@ Fonts:
 
 */
 
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Official Brand Colors */
+:root {
+    --cw-yellow: #FFC907;
+    --cw-blue: #2E9DF7;
+    --cw-light-blue: #8BD1CB;
+    --cw-green: #4FCB53;
+    --cw-font: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+/* Base styles */
+body {
+    font-family: var(--cw-font);
+    line-height: 1.6;
+    color: #222;
+    background-color: #f4f8fb;
+}
+
+/* Logo styling */
+.logo-container {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background: var(--cw-blue); /* Use brand blue for contrast */
+}
+
+.logo {
+    max-width: 300px; /* Increased from 200px to 300px */
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Hero section styling */
+.hero {
+    position: relative;
+    height: 80vh; /* 80% of viewport height */
+    min-height: 600px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-image: url('img/SierraLeone_2023_CG-3354.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Dark overlay for better text readability */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg, rgba(46,157,247,0.7) 0%, rgba(255,201,7,0.5) 100%
+    ); /* Blend with brand blue */
+}
+
+/* Container for hero content */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+    padding: 80px 20px;
+    background-color: #FFC907; /* Primary Yellow */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Story section styling */
+.story {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #8BD1CB; /* Light Blue */
+    color: #333333;
+}
+
+.story h2 {
+    color: #2E9DF7;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.story-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.story-content p {
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+    line-height: 1.8;
+}
+
+.hero h1 {
+    font-family: 'Avenir', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 900; /* Extra bold weight */
+    margin-bottom: 24px;
+    color: #FFC907; /* Primary Yellow */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 
+        2px 2px 0 rgba(0, 0, 0, 0.2),
+        -2px -2px 0 rgba(0, 0, 0, 0.2),
+        4px 4px 8px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(180deg, #FFC907, #FF902A); /* Yellow to Orange gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.hero p {
+    font-family: 'Proxima Nova', 'Avenir', sans-serif;
+    font-size: 1.75rem; /* Slightly larger */
+    max-width: 800px;
+    margin: 0 auto 32px;
+    line-height: 1.8;
+    color: #ffffff;
+    font-weight: 500; /* Medium weight for better visibility */
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        0 4px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+    opacity: 0.95; /* Slight transparency for depth */
+}
+
+/* Hero button styling */
+.hero-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #4FCB53, #159A48); /* Green gradient */
+    color: #fff;
+    font-family: var(--cw-font);
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px 48px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.2),
+        0 8px 16px rgba(79, 203, 83, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-button:hover {
+    background: linear-gradient(135deg, #159A48, #4FCB53); /* Reverse gradient */
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 
+        0 6px 12px rgba(0, 0, 0, 0.3),
+        0 12px 24px rgba(79, 203, 83, 0.4);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
 /* 
   Charity: Water Landing Page Styles
   This CSS uses the provided color palette and beginner-friendly styles.
@@ -91,21 +267,179 @@ h2 {
   font-weight: bold;
 }
 
-/* Call-to-Action Section Styles */
+/* Redesigned Call-to-Action Section for Transparency & Impact */
 .call-to-action {
-  background-color: #FFC907; /* Primary Yellow */
-  color: #222;
-  text-align: center;
-  padding: 30px 20px;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(8px);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(46,157,247,0.10);
+    margin: 40px auto 32px auto;
+    max-width: 700px;
+    padding: 48px 24px 36px 24px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
-/* Style the impact story image */
+.call-to-action h2 {
+    color: #2E9DF7;
+    font-size: 2.2rem;
+    margin-bottom: 18px;
+    font-family: 'Avenir', sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.call-to-action p {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 28px;
+    font-weight: 500;
+    background: rgba(255,255,255,0.4);
+    border-radius: 8px;
+    padding: 10px 12px;
+    box-shadow: 0 1px 4px rgba(46,157,247,0.05);
+}
+
+/* Progress bar for immediate impact */
+.cta-progress {
+    width: 90%;
+    max-width: 400px;
+    height: 18px;
+    background: #f4f8fb;
+    border-radius: 9px;
+    margin: 0 auto 24px auto;
+    box-shadow: 0 1px 4px rgba(46,157,247,0.08);
+    overflow: hidden;
+    position: relative;
+}
+.cta-progress-bar {
+    height: 100%;
+    width: 70%; /* Example: 70% funded */
+    background: linear-gradient(90deg, #FFC907 0%, #4FCB53 100%);
+    border-radius: 9px 0 0 9px;
+    transition: width 0.6s ease;
+}
+.cta-progress-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.95rem;
+    color: #2E9DF7;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Donate Button - modern look */
+.donate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, var(--cw-green) 0%, #159A48 100%);
+    color: #fff;
+    font-family: var(--cw-font);
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(79,203,83,0.12);
+    border: none;
+    cursor: pointer;
+    margin-top: 18px;
+    letter-spacing: 1px;
+    position: relative;
+}
+/* Removed emoji from button */
+.donate-button::before {
+    content: "";
+    margin-right: 0;
+}
+.donate-button:hover {
+    background: linear-gradient(90deg, #159A48 0%, var(--cw-green) 100%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 6px 18px rgba(79,203,83,0.18);
+}
+
+/* Impact Story Section Styling */
+.impact-story {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.location-tag {
+    display: inline-block;
+    background-color: #FFC907; /* Primary Yellow */
+    color: #333333;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: 'Avenir', sans-serif;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.impact-story h2 {
+    color: #2E9DF7; /* Primary Blue */
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.impact-image-container {
+    position: relative;
+    margin-bottom: 24px;
+}
+
 .impact-image {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(46, 157, 247, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 24px rgba(46, 157, 247, 0.2);
+}
+
+.image-caption {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 12px;
+    font-style: italic;
+    text-align: center;
+}
+
+.impact-text {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.impact-highlight {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 24px;
+    position: relative;
+    padding-left: 24px;
+    border-left: 4px solid #4FCB53; /* Green accent */
+}
+
+.impact-details {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
 }
 
 /* Donate Button Styles */
@@ -136,63 +470,328 @@ section {
   margin-bottom: 20px;
 }
 
-/* 
-  Media Queries for Responsive Design
-  Media queries help make your website look good on different screen sizes,
-  like phones (small screens) and computers (large screens).
-*/
-
-/* This media query applies styles when the screen is 600px wide or less (like on most phones) */
-@media (max-width: 600px) {
-  /* Make hero section padding smaller on small screens */
-  .hero {
-    padding: 32px 8px;
-    font-size: 1em;
-  }
-
-  /* Make headline font size smaller so it fits on small screens */
-  .hero h1 {
-    font-size: 1.4em;
-  }
-
-  /* Make subheadline font size smaller */
-  .hero p {
-    font-size: 1em;
-  }
-
-  /* Make story and call-to-action sections have less padding */
-  .story,
-  .call-to-action,
-  .donation-section {
-    padding: 14px 8px;
-  }
-
-  /* Make impact story image smaller and stack above the text */
-  .impact-content {
-    display: block; /* Stack items vertically */
-    text-align: center;
-  }
-
-  .impact-image {
-    width: 90%;    /* Make image take up most of the width */
-    max-width: 220px;
-  }
+/* Impact Story Madagascar Background Section */
+.impact-story-bg {
+    position: relative;
+    min-height: 500px;
+    width: 100%;
+    background-image: url('img/Madagascar_2019_CG-4013.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    margin: 0 auto 40px auto;
+    border-radius: 16px;
+    overflow: hidden;
 }
 
-/* This media query applies styles when the screen is wider than 600px (like on tablets and computers) */
-@media (min-width: 601px) {
-  /* Show image and text side by side in the impact story */
-  .impact-content {
-    display: flex;           /* Place items in a row */
-    align-items: center;     /* Vertically center items */
-    justify-content: center; /* Center the whole group */
-    gap: 28px;               /* Space between image and text */
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
-  }
+/* Overlay for readability */
+.impact-bg-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(46,157,247,0.7) 0%, rgba(255,201,7,0.5) 100%);
+    opacity: 0.85;
+    z-index: 1;
+}
 
-  .impact-image {
-    width: 300px;
-  }
+.impact-story-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    padding: 32px 20px;
+    background: rgba(0,0,0,0.25);
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(46,157,247,0.10);
+}
+
+.location-tag {
+    display: inline-block;
+    background: #FFC907;
+    color: #222;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 8px 18px;
+    margin-bottom: 18px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.impact-story-content h2 {
+    font-size: 2.3rem;
+    margin-bottom: 24px;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.impact-highlight {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #FFC907;
+    margin-bottom: 20px;
+    border-left: 4px solid #4FCB53;
+    padding-left: 18px;
+    background: rgba(255,255,255,0.08);
+    display: inline-block;
+    text-align: left;
+}
+
+.impact-details {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 18px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.18);
+}
+
+.image-caption {
+    color: #f4f8fb;
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-top: 18px;
+    opacity: 0.85;
+}
+
+/* Impact Statistics Bar Styles */
+.stats-bar {
+    width: 100%;
+    background: linear-gradient(90deg, #FFC907 0%, #2E9DF7 100%);
+    padding: 28px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 12px rgba(46,157,247,0.07);
+    margin-bottom: 0;
+    z-index: 2;
+    position: relative;
+}
+
+.stats-bar-content {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat {
+    color: #222;
+    font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: center;
+    background: rgba(255,255,255,0.18);
+    border-radius: 18px;
+    padding: 10px 22px;
+    margin: 4px 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.stat-number {
+    font-size: 1.7rem;
+    color: #2E9DF7;
+    font-weight: 900;
+    margin-right: 6px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 700px) {
+    .impact-story-bg {
+        padding: 40px 8px;
+        min-height: 350px;
+    }
+    .impact-story-content {
+        padding: 18px 6px;
+    }
+    .impact-story-content h2 {
+        font-size: 1.3rem;
+    }
+    .impact-highlight {
+        font-size: 1rem;
+        padding-left: 10px;
+    }
+
+    .stats-bar-content {
+        flex-direction: column;
+        gap: 18px;
+    }
+    .stat {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+    .stat-number {
+        font-size: 1.2rem;
+    }
+}
+
+/* ==============================================
+   Responsive Design with Media Queries
+   
+   We use media queries to create a responsive design
+   that adapts to different screen sizes. This ensures
+   our website looks good on all devices from mobile
+   phones to large desktop screens.
+   
+   Breakpoints:
+   - Mobile: up to 600px
+   - Tablet: 601px to 1024px
+   - Desktop: 1025px and above
+   ============================================== */
+
+/* Small devices (phones, 600px and below) */
+@media (max-width: 600px) {
+    /* Logo adjustments for mobile */
+    .logo {
+        max-width: 200px; /* Smaller logo on mobile */
+    }
+    
+    /* Hero section mobile adjustments */
+    .hero {
+        min-height: 500px; /* Shorter hero section */
+        padding: 20px 16px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem; /* Smaller headline */
+        letter-spacing: 0;
+    }
+    
+    .hero p {
+        font-size: 1.2rem; /* Smaller subheadline */
+        padding: 0 10px;
+    }
+    
+    .hero-button {
+        padding: 16px 32px; /* Smaller padding */
+        font-size: 1.1rem;
+        width: 90%; /* Nearly full width button */
+        max-width: 300px;
+    }
+
+    /* Story section mobile adjustments */
+    .story {
+        padding: 40px 20px;
+    }
+    
+    .story h2 {
+        font-size: 2rem;
+    }
+    
+    .story-content p {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+
+    /* Impact story mobile layout */
+    .impact-story {
+        padding: 40px 16px;
+    }
+
+    .impact-story h2 {
+        font-size: 2rem;
+        margin-bottom: 24px;
+    }
+
+    .impact-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .impact-image {
+        max-width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .impact-highlight {
+        font-size: 1.2rem;
+        padding-left: 16px;
+    }
+
+    .impact-details {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    /* Call-to-action mobile adjustments */
+    .call-to-action {
+        padding: 40px 20px;
+    }
+    
+    .call-to-action h2 {
+        font-size: 2rem;
+    }
+    
+    .donate-button {
+        width: 90%;
+        max-width: 280px;
+    }
+}
+
+/* Medium devices (tablets, 601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .logo {
+        max-width: 250px; /* Medium sized logo */
+    }
+    
+    .hero h1 {
+        font-size: 3.5rem; /* Medium sized headline */
+    }
+    
+    .hero p {
+        font-size: 1.4rem;
+        max-width: 600px;
+    }
+    
+    .story-content,
+    .impact-content {
+        max-width: 90%;
+    }
+    
+    /* Tablet layout for impact story */
+    .impact-content {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .impact-image {
+        max-width: 280px;
+    }
+}
+
+/* Large devices (desktops, 1025px and up) */
+@media (min-width: 1025px) {
+    .hero-content {
+        max-width: 1200px; /* Wider content on large screens */
+    }
+    
+    .story-content,
+    .impact-content {
+        max-width: 1000px;
+    }
+    
+    /* Desktop layout for impact story */
+    .impact-content {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+    
+    .impact-image {
+        max-width: 320px;
+    }
+    
+    /* Hover effects only on desktop */
+    .hero-button:hover {
+        transform: translateY(-2px) scale(1.05);
+    }
 }

@@ -5,43 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charity Water Landing Page</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
+    <!-- Logo Section -->
+    <div class="logo-container">
+        <img src="img/cw_logo-2.png" alt="charity: water logo" class="logo">
+    </div>
+
+
+    <!-- Hero Section: Full-width background image with centered content -->
     <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <!-- Main headline -->
+            <h1>Make Change Flow</h1>
+            <!-- Subheadline -->
+            <p>Every $10 brings clean water to a family. You'll see exactly where your gift goes — 100% funds water projects you can track.</p>
+            <!-- Call to action button in hero -->
+            <a href="https://www.charitywater.org/" class="hero-button" target="_blank">Start Making Change</a>
+        </div>
+    </section>
+
+    <!-- Impact Statistics Bar -->
+    <section class="stats-bar">
+        <div class="stats-bar-content">
+            <div class="stat"><span class="stat-number">20,297,336</span> people served</div>
+            <div class="stat"><span class="stat-number">186,000</span> water projects</div>
+            <div class="stat"><span class="stat-number">29</span> countries since 2006</div>
+        </div>
     </section>
 
     <!-- Story Section: This tells the story of the nonprofit -->
     <section class="story">
         <h2>Our Story</h2>
-        <p>
-         
-    </section>
-
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
+        <div class="story-content">
+            <p>785 million people in the world live without clean water. That's roughly 1 in 10 people on earth.</p>
+            <p>We're working to change that. We build sustainable, community-owned water projects around the world.</p>
+            <p>When a community gets access to clean water, it can change everything. It improves health, increases access to food, grows local economies, and helps kids spend more time in school.</p>
         </div>
     </section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
+    <!-- Featured Impact Story Section: Madagascar with background image -->
+    <section class="impact-story-bg">
+        <div class="impact-bg-overlay"></div>
+        <div class="impact-story-content">
+            <div class="location-tag">Madagascar</div>
+            <h2>Transforming Lives Through Clean Water</h2>
+            <blockquote class="impact-highlight">
+                "Before the well, our children were always sick. Now with clean water, they're healthy and can go to school regularly."
+            </blockquote>
+            <p class="impact-details">
+                In Madagascar, millions lack access to clean water. Through our projects, we're helping communities install sustainable water solutions that transform lives. Each well serves hundreds of people, providing clean, safe water for generations to come.
+            </p>
+            <div class="image-caption">Community members celebrating their new water project</div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section: Modern, transparent, and impactful -->
     <section class="call-to-action">
         <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
+        <p>
+            Your support can help save lives. Every donation brings us closer to a world with clean water for all.<br>
+            <span style="color:#2E9DF7;font-weight:600;">100% of your gift funds water projects you can track.</span>
+        </p>
+        <a href="https://www.charitywater.org/" class="donate-button" target="_blank">Donate Now</a>
     </section>
 </body>
 </html>
